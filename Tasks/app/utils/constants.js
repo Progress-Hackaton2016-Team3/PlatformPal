@@ -4,3 +4,5 @@ exports.deleteProjectMessage = "Do you want to delete the project? This will del
 exports.deleteProjectHeader = "Delete project";
 exports.deleteTaskMessage = "Do you want to delete the task?";
 exports.deleteTaskHeader = "Delete task";
+exports.BlogPostURL = "http://feeds.telerik.com/blogs";
+exports.BlogPostEndPoint = "https://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q=" + exports.BlogPostURL;

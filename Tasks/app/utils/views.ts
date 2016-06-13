@@ -1,4 +1,4 @@
-﻿export module Views {
+export module Views {
     export var main = "components/main/main";
     export var tasks = "components/tasks/tasks";
     export var projects = "components/projects/projects";
@@ -12,5 +12,6 @@
     export var datePicker = "components/date-picker/date-picker";
     export var timePicker = "components/time-picker/time-picker";
     export var listPicker = "components/list-picker/list-picker";
-    export var test = "components/test/page1";
+    export var blogs = "components/blogs/blogs";
+    export var webview = "components/webview/webview";
 }

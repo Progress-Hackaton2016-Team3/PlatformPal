@@ -1,0 +1,4 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      navigatingTo="navigatingTo" >
+<!--     <WebView id="web-view"></WebView> -->
+</Page>

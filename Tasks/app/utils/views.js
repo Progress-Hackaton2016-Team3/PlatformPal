@@ -13,5 +13,6 @@ var Views;
     Views.datePicker = "components/date-picker/date-picker";
     Views.timePicker = "components/time-picker/time-picker";
     Views.listPicker = "components/list-picker/list-picker";
-    Views.test = "components/test/page1";
+    Views.blogs = "components/blogs/blogs";
+    Views.blogs = "components/webview/webview";
 })(Views = exports.Views || (exports.Views = {}));

@@ -1,35 +1,19 @@
 {
-  "name": "sample-Tasks",
-  "version": "1.0.0",
-  "description": "A Tasks sample, built with the NativeScript framework",
-  "main": "app/package.json",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "name": "PlatformPal",
+  "version": "0.0.1",
+  "description": "A sample application built during the Progress hackaton",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NativeScript/sample-Tasks.git"
+    "url": "https://github.com/Progress-Hackaton2016-Team3/PlatformPal.git"
   },
-  "keywords": [
-    "nativescript",
-    "telerik",
-    "sample",
-    "tasks",
-    "tns",
-    "example"
-  ],
-  "author": "Valio Stoychev",
+  "author": "Progress",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/NativeScript/sample-Tasks/issues"
+    "url": "https://github.com/Progress-Hackaton2016-Team3/PlatformPal/issues"
   },
-  "homepage": "https://github.com/NativeScript/sample-Tasks",
-  "devDependencies": {
-    "nativescript-dev-typescript": "^0.3.1",
-    "typescript": "^1.8.9"
-  },
+  "homepage": "https://github.com/Progress-Hackaton2016-Team3/PlatformPal",
   "nativescript": {
-    "id": "org.nativescript.sampleTasks",
+    "id": "com.telerik.platformPal",
     "tns-ios": {
       "version": "2.0.0"
     },
@@ -38,7 +22,7 @@
     }
   },
   "dependencies": {
-    "sample-tasks-app-options": "file:app_options",
+    "app-options": "file:app_options",
     "tns-core-modules": "2.0.1"
   }
 }

@@ -5,7 +5,7 @@
   <GridLayout rows="auto, *, auto, auto" >
     <StackLayout cssClass="sideDrawerHeader">
       <Border borderWidth="2" borderColor="#554E4A" tap="editProfileButtonTap" cssClass="sideDrawerProfilePictureContainer">
-        <Image src="res://profile_picture" stretch="none" cssClass="profilePicture" />
+        <Image src="http://a1182.phobos.apple.com/us/r30/Purple/v4/fd/10/96/fd1096c9-2dc0-a850-5d95-ccd2055135d8/mza_449027345741886691.100x100-75.png" stretch="none" cssClass="profilePicture" />
       </Border>
 
       <Label bindingContext="{{ user }}" text="{{ DisplayName }}" cssClass="sideDrawerLabel" />

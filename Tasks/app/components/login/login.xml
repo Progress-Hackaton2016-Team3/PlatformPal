@@ -1,10 +1,11 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd"
       xmlns:common="components/common"
-      navigatingTo="navigatingTo" >
-  <GridLayout>
-    <ScrollView>
+      navigatingTo="navigatingTo">
+  <GridLayout> 
+    <WebView url="{{ url }}" width="*" height="650px" id="webView"/>
+<!--  <ScrollView>     
       <StackLayout>
-        <Image src="res://login_logo" cssClass="logo" stretch="none" />
+		<Image src="res://login_logo" cssClass="logo" stretch="none" />
 
         <Label text="{{ strings.loginMessage }}" margin="8 16 16 16" cssClass="header"/>
 
@@ -16,7 +17,7 @@
         <Button text="{{ strings.login }}" tap="loginButtonTap" cssClass="primaryButton"/>
         <Button text="{{ strings.signUp }}" tap="signUpButtonTap" cssClass="secondaryButton"/>
       </StackLayout>
-    </ScrollView>
+    </ScrollView> -->
 
     <ActivityIndicator busy="{{ isLoading }}" />
   </GridLayout>

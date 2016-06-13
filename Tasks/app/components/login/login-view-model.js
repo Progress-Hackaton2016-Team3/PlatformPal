@@ -3,81 +3,32 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
+var appSettings = require("application-settings");
 var viewModelBaseModule = require("../common/view-model-base");
-var serviceModule = require("../../utils/service");
 var navigationModule = require("../../utils/navigation");
 var viewsModule = require("../../utils/views");
 var LoginViewModel = (function (_super) {
     __extends(LoginViewModel, _super);
     function LoginViewModel() {
         _super.call(this);
-        this._username = "";
-        this._password = "";
+        this._url = "https://platform.telerik.com/appbuilder/Mist/ClientLogin?client=Desktop&client_name=IceniumGraphite";
     }
-    Object.defineProperty(LoginViewModel.prototype, "username", {
+    Object.defineProperty(LoginViewModel.prototype, "url", {
         get: function () {
-            return this._username;
-        },
-        set: function (value) {
-            if (this._username !== value) {
-                this._username = value;
-                this.notifyPropertyChange("username", value);
-            }
+            return this._url;
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(LoginViewModel.prototype, "password", {
-        get: function () {
-            return this._password;
-        },
-        set: function (value) {
-            if (this._password !== value) {
-                this._password = value;
-                this.notifyPropertyChange("password", value);
-            }
-        },
-        enumerable: true,
-        configurable: true
-    });
-    LoginViewModel.prototype.login = function () {
-        var _this = this;
-        if (this.validate()) {
-            if (!this.beginLoading())
-                return;
-            serviceModule.service.login(this.username, this.password).then(function (data) {
-                navigationModule.navigate({
-                    moduleName: viewsModule.Views.main
-                });
-                _this.endLoading();
-            }, function (error) {
-                _this.clearPassword();
-                _this.endLoading();
+    LoginViewModel.prototype.processLogin = function (data) {
+        var regex = /notify\(\"(.*)\"\)/gm, match = regex.exec(data);
+        if (match) {
+            var token = JSON.stringify(JSON.parse(decodeURIComponent(match[1])));
+            appSettings.setString("AUTH_TOKEN", token);
+            navigationModule.navigate({
+                moduleName: viewsModule.Views.main
             });
         }
-        else {
-            this.clearPassword();
-        }
-    };
-    LoginViewModel.prototype.signUp = function () {
-        navigationModule.navigate({
-            moduleName: viewsModule.Views.signUp,
-            backstackVisible: false
-        });
-    };
-    LoginViewModel.prototype.clearPassword = function () {
-        this.password = "";
-    };
-    LoginViewModel.prototype.validate = function () {
-        if (!this.username || this.username === "") {
-            this.showError("Please enter username.");
-            return false;
-        }
-        if (!this.password || this.password === "") {
-            this.showError("Please enter password.");
-            return false;
-        }
-        return true;
     };
     return LoginViewModel;
 })(viewModelBaseModule.ViewModelBase);

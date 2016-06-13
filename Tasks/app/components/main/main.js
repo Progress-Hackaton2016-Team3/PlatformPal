@@ -9,13 +9,11 @@ function navigatingTo(args) {
 exports.navigatingTo = navigatingTo;
 function viewTap(args) {
     var view = args.view;
-    viewModel.views.selectItem(view.bindingContext);
     var data = view.bindingContext.data;
     navigationModule.navigate(data.View);
 }
 exports.viewTap = viewTap;
 function editProfileButtonTap() {
-    viewModel.editProfile();
 }
 exports.editProfileButtonTap = editProfileButtonTap;
 function logoutButtonTap() {

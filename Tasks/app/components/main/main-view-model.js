@@ -4,8 +4,6 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var viewModelBaseModule = require("../common/view-model-base");
-var editProfileViewModelModule = require("../edit-profile/edit-profile-view-model");
-var listPickerViewModelModule = require("../list-picker/list-picker-view-model");
 var serviceModule = require("../../utils/service");
 var navigationModule = require("../../utils/navigation");
 var viewsModule = require("../../utils/views");
@@ -23,13 +21,6 @@ var MainViewModel = (function (_super) {
             Name: "Projects",
             View: viewsModule.Views.projects
         };
-        this._views = new listPickerViewModelModule.ListPickerViewModel(function () {
-            return new Promise(function (resolve, reject) {
-                resolve([tasksView, projectsView]);
-            });
-        }, tasksView, function (selectedItem) {
-        });
-        this.refresh();
     }
     Object.defineProperty(MainViewModel.prototype, "user", {
         get: function () {
@@ -44,36 +35,12 @@ var MainViewModel = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(MainViewModel.prototype, "views", {
-        get: function () {
-            return this._views;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    MainViewModel.prototype.editProfile = function () {
-        navigationModule.navigate({
-            moduleName: viewsModule.Views.editProfile,
-            context: new editProfileViewModelModule.EditProfileViewModel(this.user)
-        });
-    };
     MainViewModel.prototype.logout = function () {
         serviceModule.service.logout();
         navigationModule.navigate({
             moduleName: viewsModule.Views.login,
             backstackVisible: false,
             clearHistory: true
-        });
-    };
-    MainViewModel.prototype.refresh = function () {
-        var _this = this;
-        if (!this.beginLoading())
-            return;
-        serviceModule.service.getCurrentUser().then(function (user) {
-            _this.user = user;
-            _this.endLoading();
-        }, function (error) {
-            _this.endLoading();
         });
     };
     return MainViewModel;

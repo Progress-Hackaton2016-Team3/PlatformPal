@@ -1,4 +1,4 @@
-﻿import applicationSettingsModule = require("application-settings");
+import applicationSettingsModule = require("application-settings");
 import imageSourceModule = require("image-source");
 
 import constantsModule = require("./constants");
@@ -18,17 +18,17 @@ export class Service {
         return applicationSettingsModule.hasKey(constantsModule.authenticationTokenKey);
     }
 
-    login(username: string, password: string): Promise<any> {
-        return new Promise<any>((resolve, reject) => {
-            var everlive = new everliveModule(constantsModule.telerikApiKey);
-            everlive.Users.login(username, password,(data: any) => {
-                this.setupLocalSettings(data.result.access_token);
-                resolve(data);
-            }, error => {
-                    Service.showErrorAndReject(error, reject);
-                })
-        });
-    }
+    // login(username: string, password: string): Promise<any> {
+    //     return new Promise<any>((resolve, reject) => {          
+    //         var everlive = new everliveModule(constantsModule.telerikApiKey);
+    //         everlive.Users.login(username, password,(data: any) => {
+    //             this.setupLocalSettings(data.result.access_token);
+    //             resolve(data);
+    //         }, error => {
+    //                 Service.showErrorAndReject(error, reject);
+    //             })
+    //     });
+    // }
 
     logout() {
         this.clearLocalSettings();

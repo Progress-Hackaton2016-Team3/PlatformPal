@@ -1,6 +1,4 @@
-﻿import viewModelBaseModule = require("../common/view-model-base");
-import editProfileViewModelModule = require("../edit-profile/edit-profile-view-model");
-import listPickerViewModelModule = require("../list-picker/list-picker-view-model");
+import viewModelBaseModule = require("../common/view-model-base");
 
 import serviceModule = require("../../utils/service");
 import navigationModule = require("../../utils/navigation");
@@ -8,9 +6,8 @@ import viewsModule = require("../../utils/views");
 
 export class MainViewModel extends viewModelBaseModule.ViewModelBase {
     private _user: any;
-    private _views: listPickerViewModelModule.ListPickerViewModel;
-
-    constructor() {
+   
+	constructor() {
         super();
 
         var tasksView = {
@@ -24,15 +21,6 @@ export class MainViewModel extends viewModelBaseModule.ViewModelBase {
             Name: "Projects",
             View: viewsModule.Views.projects
         };
-
-        this._views = new listPickerViewModelModule.ListPickerViewModel(() => {
-            return new Promise<any[]>((resolve, reject) => {
-                resolve([tasksView, projectsView]);
-            });
-        }, tasksView,(selectedItem) => {
-            });
-
-        this.refresh();
     }
 
     get user(): any {
@@ -46,17 +34,6 @@ export class MainViewModel extends viewModelBaseModule.ViewModelBase {
         }
     }
 
-    get views(): listPickerViewModelModule.ListPickerViewModel {
-        return this._views;
-    }
-
-    editProfile() {
-        navigationModule.navigate({
-            moduleName: viewsModule.Views.editProfile,
-            context: new editProfileViewModelModule.EditProfileViewModel(this.user)
-        });
-    }
-
     logout() {
         serviceModule.service.logout();
         navigationModule.navigate({
@@ -64,15 +41,5 @@ export class MainViewModel extends viewModelBaseModule.ViewModelBase {
             backstackVisible: false,
             clearHistory: true
         });
-    }
-
-    refresh() {
-        if (!this.beginLoading())return;
-        serviceModule.service.getCurrentUser().then(user => {
-            this.user = user;
-            this.endLoading();
-        }, error => {
-                this.endLoading();
-            });
     }
 }

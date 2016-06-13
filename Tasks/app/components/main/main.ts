@@ -1,4 +1,4 @@
-﻿import observableModule = require("data/observable");
+import observableModule = require("data/observable");
 import viewModule = require("ui/core/view");
 import listViewModule = require("ui/list-view");
 import pageModule = require("ui/page");
@@ -16,13 +16,12 @@ export function navigatingTo(args: observableModule.EventData) {
 
 export function viewTap(args: listViewModule.ItemEventData) {
     var view = <viewModule.View>args.view;
-    viewModel.views.selectItem(<listPickerViewModelModule.ListItem>view.bindingContext);
     var data = view.bindingContext.data;
     navigationModule.navigate(data.View);
 } 
 
 export function editProfileButtonTap() {
-    viewModel.editProfile();
+   
 }
 
 export function logoutButtonTap() {

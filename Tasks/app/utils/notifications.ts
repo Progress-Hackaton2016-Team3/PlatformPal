@@ -1,18 +1,20 @@
-﻿import dialogsModule = require("ui/dialogs");
+import * as dialogsModule from "ui/dialogs";
 
-export function showError(error: string) {
-    dialogsModule.alert({ title: "Error", message: error, okButtonText: "Close" });
-}
+export module Notifications {
+    export function showError(error: string): Promise<void> {
+        return dialogsModule.alert({ title: "Oops", message: error, okButtonText: "Close" });
+    }
 
-export function showInfo(message: string) {
-    dialogsModule.alert({ title: "Info", message: message, okButtonText: "OK" });
-}
+    export function showInfo(message: string): Promise<void> {
+        return dialogsModule.alert({ title: "Info", message: message, okButtonText: "OK" });
+    }
 
-export function confirm(title: string, message: string): Promise<boolean> {
-    return dialogsModule.confirm({
-        title: title,
-        message: message,
-        okButtonText: "YES",
-        cancelButtonText: "NO"
-    });
+    export function confirm(title: string, message: string): Promise<boolean> {
+        return dialogsModule.confirm({
+            title: title,
+            message: message,
+            okButtonText: "YES",
+            cancelButtonText: "NO"
+        });
+    }
 }

@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "app-options": "file:app_options",
-    "tns-core-modules": "2.0.1"
+    "tns-core-modules": "2.0.1",
+    "nativescript-telerik-ui-pro": "file:_plugins/nativescript-ui-debug-dev-pro.tgz"
   }
 }

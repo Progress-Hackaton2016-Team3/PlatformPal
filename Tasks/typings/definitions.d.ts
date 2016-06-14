@@ -21,6 +21,7 @@ interface Blog {
     link: string;
     publishedDate: string;
     title: string;
+    img: string;
 }
 
 interface OperationalStatus {

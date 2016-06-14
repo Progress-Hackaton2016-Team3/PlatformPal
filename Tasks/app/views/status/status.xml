@@ -1,7 +1,6 @@
-<TabViewItem title="&#xf1fe; Status" class="fa-6">
+<TabViewItem title="&#xf1fe; Status">
   <TabViewItem.view>
-   	<StackLayout class="tab-content">
-        <ListView items="{{ items }}" itemTap="statusItemTap">
+   <ListView items="{{ items }}" itemTap="statusItemTap" separatorColor="#fff">
           <ListView.itemTemplate>
             <GridLayout columns="40, auto" class="list-view-item">
                 <Label text="{{ status !== 'Operational' ? '&#xf10c;' : '&#xf05d;' }}" col="0" class="{{ status !== 'Operational' ? 'item-icon red' : 'item-icon green' }}" />
@@ -12,6 +11,5 @@
             </GridLayout> 
           </ListView.itemTemplate>
         </ListView>
-  	</StackLayout>
   </TabViewItem.view>
 </TabViewItem>

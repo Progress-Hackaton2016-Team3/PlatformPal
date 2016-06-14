@@ -5,7 +5,7 @@ import {Notifications} from "../../utils/notifications";
 import * as http from "http"; 
 
 export class ViewModelItem {
-    constructor(public name: string, public status: string) {
+    constructor(public name: string, public status: string, public date?: string) {
     }
 }
 

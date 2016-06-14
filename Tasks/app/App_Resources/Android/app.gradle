@@ -1,5 +1,5 @@
 android {
     defaultConfig {
-        applicationId "com.telerik.NSHelloWorld"
+        applicationId "com.telerik.PlatformPal"
     }
 }

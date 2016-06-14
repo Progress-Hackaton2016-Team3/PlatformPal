@@ -28,7 +28,7 @@ export function statusItemTap(args: listView.ItemEventData) {
 export let selectedIncidentItem: any;
 export function incidentsItemTap(args: listView.ItemEventData) {    
     selectedIncidentItem = args.view.bindingContext; 
-    frames.topmost().navigate("./views/status/status-details-page");
+    frames.topmost().navigate("./views/incidenst/incidents-details-page");
 }
 
     

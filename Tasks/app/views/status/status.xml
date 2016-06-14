@@ -3,10 +3,14 @@
    	<StackLayout class="tab-content">
         <ListView items="{{ items }}" itemTap="statusItemTap" row="1">
           <ListView.itemTemplate>
-            <GridLayout columns="20, *">
+<!--             <GridLayout columns="20, *">
             	<Label text="&#xf1e6;" class="listItem" col="0"/>
             	<Label text="{{ title }}" class="listItem" col="1"/>
-            </GridLayout>
+            </GridLayout> -->
+            <GridLayout columns="*, auto">
+                <Label text="{{ name }}" col="0"/>
+                <Label text="{{ status }}" col="1" />    
+			</GridLayout> 
           </ListView.itemTemplate>
         </ListView>
   	</StackLayout>

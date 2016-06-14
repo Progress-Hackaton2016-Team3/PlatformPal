@@ -1,5 +1,4 @@
 "use strict";
-var notifications_1 = require("./../../utils/notifications");
 var Everlive = require('./everlive');
 var everlive = new Everlive({
     appId: 'r70pgro2ncmch5w4',
@@ -33,7 +32,7 @@ var PushNotificationsService;
             console.log("Push notifications: device registration success!");
         }, function (error) {
             console.log(error);
-            notifications_1.Notifications.showInfo(JSON.stringify(error));
+            //Notifications.showInfo(JSON.stringify(error));
         });
     }
     PushNotificationsService.register = register;

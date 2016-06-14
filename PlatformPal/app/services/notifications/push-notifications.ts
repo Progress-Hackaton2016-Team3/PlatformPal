@@ -36,7 +36,7 @@ export module PushNotificationsService {
             },
             function (error) {
                 console.log(error);
-                Notifications.showInfo(JSON.stringify(error));
+                //Notifications.showInfo(JSON.stringify(error));
             });
     }
 }

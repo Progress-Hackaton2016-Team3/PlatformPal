@@ -24,9 +24,9 @@ interface Blog {
 }
 
 interface OperationalStatus {
-		name: string;
-		status: string;
-		id: string;
+    name: string;
+    status: string;
+    id: string;
 }
 
 declare module "nativescript-local-notifications" {

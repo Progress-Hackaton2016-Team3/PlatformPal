@@ -1,7 +1,7 @@
 import LocalNotifications = require("nativescript-local-notifications");
 
-module.exports = {
-    raiseNotification: function (title, message) {
+export module NotificationsService {
+    export function raiseNotification(message: string, title?: string) {
         LocalNotifications.schedule([{
             title: title || 'PlatformPal',
             body: message || 'No notification body',
@@ -14,15 +14,15 @@ module.exports = {
                 console.log("Notification scheduling error: " + error);
             }
         );
-    },
-    getNotifications: function () {
+    }
+    export function getNotifications() {
         LocalNotifications.getScheduledIds().then(
             function (ids) {
                 console.log("ID's: " + ids);
             }
         );
-    },
-    cancelNotification: function (id) {
+    }
+    export function cancelNotification(id) {
         LocalNotifications.cancel(id).then(
             function (foundAndCanceled) {
                 if (foundAndCanceled) {
@@ -32,22 +32,22 @@ module.exports = {
                 }
             }
         );
-    },
-    cancelAllNotifications: function () {
+    }
+    export function cancelAllNotifications() {
         LocalNotifications.cancelAll();
-    },
-    requestPermissions: function () {
+    }
+    export function requestPermissions() {
         LocalNotifications.requestPermission().then(
             function (granted) {
                 console.log("Permission granted? " + granted);
             }
         );
-    },
-    hasPermissions: function () {
+    }
+    export function hasPermissions() {
         LocalNotifications.hasPermission().then(
             function (granted) {
                 console.log("Permission granted? " + granted);
             }
         );
     }
-};
+}

@@ -1,11 +1,13 @@
+import {Notifications} from "./../../utils/notifications";
+
 let Everlive = require('./everlive');
 let everlive = new Everlive({
     appId: 'r70pgro2ncmch5w4',
     scheme: 'https'
 });
 
-module.exports = {
-    register: (callback: (message: string, title: string) => void) => {
+export module PushNotificationsService {
+    export function register(callback: (message: string, title ? : string) => void) {
         var pushSettings = {
             iOS: {
                 badge: true,
@@ -33,7 +35,7 @@ module.exports = {
             }]
             },
             notificationCallbackIOS: function (message) {
-                callback && callback(message);
+                if (callback) callback(message);
             },
             android: {
                 projectNumber: '342072530071'
@@ -42,7 +44,7 @@ module.exports = {
                 var notification = JSON.parse(pushNotificationObject);
 
                 console.log("Received notification: title=" + notification.title + ", message=" + notification.message);
-                callback && callback(notification.title, notification.message);
+                if (callback) callback(notification.message, notification.title);
             }
         };
 
@@ -51,7 +53,7 @@ module.exports = {
                 console.log("Push notifications: device registration success!")
             },
             function (error) {
-                alert(JSON.stringify(error));
+                Notifications.showInfo(JSON.stringify(error));
             });
     }
-};
+}

@@ -1,15 +1,12 @@
 <TabViewItem title="&#xf0f3; Notifications" class="fa-6">
   <TabViewItem.view>
-   	<StackLayout class="tab-content">
-        <ListView items="{{ notifications }}" itemTap="notificationItemTap">
+        <ListView items="{{ notifications }}" itemTap="notificationItemTap" separatorColor="#fff" class="notify-list-view">
           <ListView.itemTemplate>
-            <GridLayout columns="40, auto" class="list-view-item">
-                <GridLayout rows="auto, *" col="1">  
-                    <Label text="{{ message }}" row="0" class="item-title" />
-                </GridLayout>
+            <GridLayout columns="30, *" class="notify-view-item">
+               <Label text="&#xf003;" col="0" class="notify-view-item-icon"/>
+               <Label text="{{ message }}" col="1" textWrap="true" class="notify-view-item-message"/>
             </GridLayout> 
           </ListView.itemTemplate>
         </ListView>
-  	</StackLayout>
   </TabViewItem.view>
 </TabViewItem>

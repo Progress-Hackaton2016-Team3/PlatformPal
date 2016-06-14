@@ -15,6 +15,7 @@ var PushNotificationsService;
                 alert: true
             },
             notificationCallbackIOS: function (message) {
+                console.log(message);
                 if (callback)
                     callback(message);
             },

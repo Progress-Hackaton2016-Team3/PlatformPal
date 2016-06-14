@@ -9,8 +9,8 @@
     },
     "compileOnSave": true,
     "exclude": [
-        "lib",
-        "node_modules",
-        "platforms"
+        "PlatformPal/lib",
+        "PlatformPal/node_modules",
+        "PlatformPal/platforms"
     ]
 }

@@ -13,7 +13,7 @@
                             <chart:CategoricalAxis/>
                         </chart:LineSeries.horizontalAxis>
                         <chart:LineSeries.verticalAxis>
-                            <chart:LinearAxis  />
+                            <chart:LinearAxis />
                         </chart:LineSeries.verticalAxis>
                     </chart:LineSeries>
                 </chart:RadCartesianChart.series>

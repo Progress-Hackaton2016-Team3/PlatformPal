@@ -1,3 +1,4 @@
+"use strict";
 var observableArray = require("data/observable-array");
 var ViewModelItem = (function () {
     function ViewModelItem(name, status, date) {
@@ -6,9 +7,10 @@ var ViewModelItem = (function () {
         this.date = date;
     }
     return ViewModelItem;
-})();
+}());
 exports.ViewModelItem = ViewModelItem;
 var StatusViewModel = (function () {
+    //private _items: OperationalStatus[];
     function StatusViewModel() {
         var data = [
             { name: "Telerik Analytics Services", status: "Operational" },
@@ -37,5 +39,6 @@ var StatusViewModel = (function () {
         configurable: true
     });
     return StatusViewModel;
-})();
+}());
 exports.StatusViewModel = StatusViewModel;
+//# sourceMappingURL=status-view-model.js.map

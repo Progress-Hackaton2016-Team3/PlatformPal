@@ -1,5 +1,9 @@
+"use strict";
 var observableArray = require("data/observable-array");
 var status_view_model_1 = require("../status/status-view-model");
+// export class ViewModelItem {
+//     constructor(public title: string, public info: string) {}
+// }
 var IncidentsViewModel = (function () {
     function IncidentsViewModel() {
         this._items = new observableArray.ObservableArray();
@@ -391,6 +395,26 @@ var IncidentsViewModel = (function () {
             console.log(data[i].name);
             this._items.push(new status_view_model_1.ViewModelItem(data[i].name, data[i].shortlink, (new Date(data[i].created_at)).toDateString()));
         }
+        // http.request({
+        //         url: "https://api.statuspage.io/v1/pages/2lh8n3fl4jfr/incidents.json",
+        //         method: "GET",
+        //         headers: {
+        //             "Content-Type": "application/json",
+        //             "Authorization": "OAuth 82135836-4bf5-47bb-ae76-6d9037187951"
+        //         },
+        //         timeout: 5000 /* miliseconds */
+        //     })
+        //     .then((response: http.HttpResponse) => {
+        //         if (response.statusCode == 200) {
+        //             let data = response.content.toJSON();
+        //             console.log(response);
+        //         } else {
+        //             Notifications.showError(response.content.toString());
+        //         }
+        //     }, (error: any) => {
+        //         Notifications.showError(error.message);
+        //         //this.endLoading();
+        //     });
     }
     Object.defineProperty(IncidentsViewModel.prototype, "items", {
         get: function () {
@@ -401,5 +425,6 @@ var IncidentsViewModel = (function () {
     });
     IncidentsViewModel.prototype.refresh = function () { };
     return IncidentsViewModel;
-})();
+}());
 exports.IncidentsViewModel = IncidentsViewModel;
+//# sourceMappingURL=incidents-view-model.js.map

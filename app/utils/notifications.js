@@ -1,3 +1,4 @@
+"use strict";
 var dialogsModule = require("ui/dialogs");
 var Notifications;
 (function (Notifications) {
@@ -19,3 +20,4 @@ var Notifications;
     }
     Notifications.confirm = confirm;
 })(Notifications = exports.Notifications || (exports.Notifications = {}));
+//# sourceMappingURL=notifications.js.map

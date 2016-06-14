@@ -1,3 +1,4 @@
+"use strict";
 var news_view_model_1 = require("./views/news/news-view-model");
 var status_view_model_1 = require("./views/status/status-view-model");
 var notifications_view_model_1 = require("./views/notifications/notifications-view-model");
@@ -38,5 +39,6 @@ var MainViewModel = (function () {
         configurable: true
     });
     return MainViewModel;
-})();
+}());
 exports.MainViewModel = MainViewModel;
+//# sourceMappingURL=main-view-model.js.map

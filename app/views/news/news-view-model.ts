@@ -18,28 +18,28 @@ export class BlogViewModel {
              img:"http://i1-news.softpedia-static.com/images/news2/full-list-of-windows-phone-lumias-eligible-for-the-windows-10-mobile-upgrade-501795-2.jpg", link:"http://www.telerik.com/blogs/stability-improvements-in-r2-16-sp1-of-ui-for-aspnet-ajax",author:"Rumen Jekov",publishedDate:"Fri, 10 Jun 2016 09:23:01 -0700",contentSnippet:"The first service pack of the R2 2016 release of UI for ASP.NET AJAX is out. Go ahead and grab it to make your web apps more ...",content:"\u003cp\u003e\u003cspan\u003eThe first service pack of the R2 2016 release of \u003ca href\u003d\"http://www.telerik.com/products/aspnet-ajax.aspx\"\u003eUI for ASP.NET AJAX\u003c/a\u003e is out. Go ahead and grab it to make your web apps more stable.\u003c/span\u003e\u003cbr\u003e\n\u003cbr\u003e\nThe latest stability release of UI for ASP.NET AJAX R2 2016 SP1 (2016.2.607) is out and brings with it a lot of improvements. You can find below a short list that highlights some of the most valuable problems we have updated and enhanced with this release:\u003c/p\u003e\n\u003cul\u003e\n    \u003cli\u003eClose the predefined RadAlert, RadConfirm and RadPrompt popups with the Escape key\u003c/li\u003e\n    \u003cli\u003eCells on the last row in RadGrid cannot be selected using DragToSelect cells, if cursor runs out of the grid during the selection\u003c/li\u003e\n    \u003cli\u003eUsing RadEditor's ToolsFile property from the markup disregards Lightweight rendering configured from the web.config\u003c/li\u003e\n    \u003cli\u003eRadEditor\u0026#39;s TrackChanges does not track typing of !, #, $, %, \u0026amp; characters\u003c/li\u003e\n    \u003cli\u003eTitle of decorated checkboxes by RadFormDecorator is lost in FireFox and IE\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\nYou can quickly go through the complete list of fixes in the \u003ca href\u003d\"http://www.telerik.com/support/whats-new/aspnet-ajax/release-history/ui-for-asp-net-ajax-r2-2016-sp1-version-2016-2-607\"\u003eRelease Notes\u003c/a\u003e.\u003c/p\u003e\n\u003ch2\u003eStability Trends\u003c/h2\u003e\n\u003cp\u003e\nWe do understand how stability impacts your development and we always strive to significantly reduce bugs, to avoid regressions and breaking changes. That\u0026#39;s why I want to share with you the bug reduction progress from 2015 to now for three of the most popular components in the following chart:\u003c/p\u003e\n\u003cp\u003e\u003cimg width\u003d\"670\" height\u003d\"337\" style\u003d\"vertical-align:middle\" title\u003d\"Stability Improvement Trends for Top Controls\" alt\u003d\"Stability Improvement Trends for Top Controls\" src\u003d\"//d585tldpucybw.cloudfront.net/sfimages/default-source/default-album/stability-improvement-trends-for-top-controls.png?sfvrsn\u003d0\"\u003e\u003c/p\u003e\n\u003ch2\u003eImportant Resources\u003c/h2\u003e\n\u003cp\u003e\nYou can download the latest trial build \u003ca href\u003d\"https://www.telerik.com/download-trial-file/v2/ui-for-asp.net-ajax\"\u003ehere\u003c/a\u003e, as well as play with the \u003ca href\u003d\"http://demos.telerik.com/aspnet-ajax/\"\u003eLive Demos\u003c/a\u003e and read the \u003ca href\u003d\"http://docs.telerik.com/devtools/aspnet-ajax/introduction\"\u003eDocumentation\u003c/a\u003e.\u003c/p\u003e\n\u003ch2\u003e\nUpgrading Instructions\u003c/h2\u003e\n\u003cp\u003e\nThe blog post, \u003ca href\u003d\"http://www.telerik.com/blogs/upgrade-the-version-of-your-telerik-asp.net-controls-in-6-easy-steps\"\u003eUpgrade Your Telerik ASP.NET Controls in 6 Easy Steps\u003c/a\u003e,\nwill guide you through the update process and help you troubleshoot any problems that pop up.\u003c/p\u003e\n\u003ch2\u003eRoadmap Plans\u003c/h2\u003e\n\u003cp\u003e\nI also want to inform you that the Product Roadmap for R3'16 is ready. We're about to update the \u003ca href\u003d\"http://www.telerik.com/support/whats-new/aspnet-ajax/roadmap\"\u003eRoadmap page\u003c/a\u003e and will post a blog on the topic pretty soon. Stay tuned!\u003c/p\u003e\n\u003ch2\u003eShare Your Thoughts?\u003c/h2\u003e\nIf you have any questions, feedback or just want to discuss a feature request, do not hesitate to write in the comments section below, in \u003ca href\u003d\"http://feedback.telerik.com/Project/108\"\u003ethe feedback portal\u003c/a\u003e or directly to me at rumen.jekov@telerik.com.",categories:["UI for ASP.NET AJAX Team"]},
         ];
 
-        if (!this._blogs) {
-            http.request({
-                url: "https://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q=http://feeds.telerik.com/blogs",
-                method: "GET",
-                headers: { "Accept": "application/json" },
-                timeout: 2000 /* miliseconds */
-            })
-            .then((response: http.HttpResponse) => {
-                if (StatusCodes.isOK(response.statusCode)) {
-                    let jsonResponse: BlogPostsResponse = response.content.toJSON();
-                    this.blogs = jsonResponse.responseData.feed.entries;
-                    return jsonResponse;
-                } else {
-                    let errorMessage = response.content.toString();
-                	throw new Error(errorMessage);
-                }
-            }, (error: any) => {
-                throw new Error(error);
-        });
-        } else {
-            return this._blogs;
-        }
+        // if (!this._blogs) {
+        //     http.request({
+        //         url: "https://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q=http://feeds.telerik.com/blogs",
+        //         method: "GET",
+        //         headers: { "Accept": "application/json" },
+        //         timeout: 2000 /* miliseconds */
+        //     })
+        //     .then((response: http.HttpResponse) => {
+        //         if (StatusCodes.isOK(response.statusCode)) {
+        //             let jsonResponse: BlogPostsResponse = response.content.toJSON();
+        //             this.blogs = jsonResponse.responseData.feed.entries;
+        //             return jsonResponse;
+        //         } else {
+        //             let errorMessage = response.content.toString();
+        //         	throw new Error(errorMessage);
+        //         }
+        //     }, (error: any) => {
+        //         throw new Error(error);
+        // });
+        // } else {
+        //     return this._blogs;
+        // }
     }
 
 	public set blogs(value: Blog[]) {

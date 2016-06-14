@@ -31,19 +31,10 @@ interface OperationalStatus {
 }
 
 declare module "nativescript-local-notifications" {
-    export function schedule(arg: any) => void;
-    export function getScheduledIds() => void;
-    export function cancel(id: number) => void;
-    export function cancelAll() => void;
-    export function requestPermission() => any;
-    export function hasPermission() => any;
-}
-
-declare module "everlive" {
-    export function schedule(arg: any) => void;
-    export function getScheduledIds() => void;
-    export function cancel(id: number) => void;
-    export function cancelAll() => void;
-    export function requestPermission() => any;
-    export function hasPermission() => any;
+    export function schedule(arg: any): Promise<any>;
+    export function getScheduledIds(): Promise<any>;
+    export function cancel(id: number): Promise<any>;
+    export function cancelAll(): Promise<any>;
+    export function requestPermission(): Promise<any>;
+    export function hasPermission(): Promise<any>;
 }

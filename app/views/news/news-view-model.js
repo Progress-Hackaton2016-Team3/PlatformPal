@@ -1,11 +1,9 @@
-var status_codes_1 = require("../../utils/status-codes");
-var http = require("http");
+"use strict";
 var BlogViewModel = (function () {
     function BlogViewModel() {
     }
     Object.defineProperty(BlogViewModel.prototype, "blogs", {
         get: function () {
-            var _this = this;
             return [
                 { title: "HubSpot Again Ranks Telerik.com Tops in Homepage Design",
                     img: "http://www.dialinteractive.com/wp-content/uploads/2015/02/Technology-Integration-sstk_122832523_1000x666-1000x500.jpg", link: "http://www.telerik.com/blogs/hubspot-again-ranks-telerik.com-tops-in-homepage-design", author: "Paulette Stout", publishedDate: "Fri, 10 Jun 2016 13:29:43 -0700", contentSnippet: "Recently, HubSpot updated its ranking of “16 of the Best Website Homepage Design Examples,” and again included the Telerik by ...", content: "\u003cp\u003eRecently, HubSpot updated its ranking of “\u003ca href\u003d\"http://blog.hubspot.com/blog/tabid/6307/bid/34006/15-Examples-of-Brilliant-Homepage-Design.aspx#sm.000015w3930ijje2tzpk8emakn8z7\"\u003e16 of the Best Website Homepage Design Examples\u003c/a\u003e,” and again included the Telerik by Progress homepage among them. The Web and Design teams at Progress work hard to integrate best practices and innovative approaches to help customers better find what they’re looking for, so it’s fantastic to have this strong work noticed. \u003c/p\u003e\n\u003ch2\u003eWhy the Homepage Works\u003c/h2\u003e\n\u003cp\u003eThe \u003ca href\u003d\"http://www.telerik.com/home.aspx\"\u003eTelerik.com homepage\u003c/a\u003e hit high marks for:\u003c/p\u003e\n\u003cul style\u003d\"list-style-type:disc\"\u003e\n    \u003cli\u003eFirst impression: Bold colors, fun designs and videography give the site a “Google-like vibe,” making visitors feel welcome and secure that they’re dealing with real people\u003c/li\u003e\n    \u003cli\u003eClear communication: Simple, high-level overview makes it clear what the company does and what it offers, and makes it easy to learn more\u003c/li\u003e\n    \u003cli\u003eLightweight-language: Copy is easy to read, written in the language of customers\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2\u003eBest Practices in Homepage Design\u003c/h2\u003e\n\u003cp\u003eThe post also shared seven best practices in homepage design worth including as you move forward with any design work you’re pursuing. Be sure your homepage:\u003c/p\u003e\n\u003col\u003e\n    \u003cli\u003eAnswers, clearly, who the company is, what it does and what visitors can do on the site\u003c/li\u003e\n    \u003cli\u003eResonates with the intended target audience\u003c/li\u003e\n    \u003cli\u003eCommunicates a compelling value proposition\u003c/li\u003e\n    \u003cli\u003eIs optimized for multiple devices\u003c/li\u003e\n    \u003cli\u003eIncludes calls-to-action (CTAs)\u003c/li\u003e\n    \u003cli\u003eChanges frequently\u003c/li\u003e\n    \u003cli\u003eEmploys great overall design\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003eThe Telerik.com homepage was \u003ca href\u003d\"http://www.telerik.com/blogs/hubspot-blog-cites-telerik.com-as-example-of-brilliant-website-design\"\u003esimilarly recognized\u003c/a\u003e in 2015, so we’re so glad that our design skills and commitment to optimizing the customer journey is being recognized. If you have any questions for our designers, or are interested in learning about our content management system, \u003ca href\u003d\"http://www.sitefinity.com/\"\u003eProgress Sitefinity\u003c/a\u003e, leave us a comment!\u003c/p\u003e", categories: [] },
@@ -18,30 +16,28 @@ var BlogViewModel = (function () {
                 { title: "Using a Candlestick Chart in Xamarin Forms",
                     img: "http://i1-news.softpedia-static.com/images/news2/full-list-of-windows-phone-lumias-eligible-for-the-windows-10-mobile-upgrade-501795-2.jpg", link: "http://www.telerik.com/blogs/stability-improvements-in-r2-16-sp1-of-ui-for-aspnet-ajax", author: "Rumen Jekov", publishedDate: "Fri, 10 Jun 2016 09:23:01 -0700", contentSnippet: "The first service pack of the R2 2016 release of UI for ASP.NET AJAX is out. Go ahead and grab it to make your web apps more ...", content: "\u003cp\u003e\u003cspan\u003eThe first service pack of the R2 2016 release of \u003ca href\u003d\"http://www.telerik.com/products/aspnet-ajax.aspx\"\u003eUI for ASP.NET AJAX\u003c/a\u003e is out. Go ahead and grab it to make your web apps more stable.\u003c/span\u003e\u003cbr\u003e\n\u003cbr\u003e\nThe latest stability release of UI for ASP.NET AJAX R2 2016 SP1 (2016.2.607) is out and brings with it a lot of improvements. You can find below a short list that highlights some of the most valuable problems we have updated and enhanced with this release:\u003c/p\u003e\n\u003cul\u003e\n    \u003cli\u003eClose the predefined RadAlert, RadConfirm and RadPrompt popups with the Escape key\u003c/li\u003e\n    \u003cli\u003eCells on the last row in RadGrid cannot be selected using DragToSelect cells, if cursor runs out of the grid during the selection\u003c/li\u003e\n    \u003cli\u003eUsing RadEditor's ToolsFile property from the markup disregards Lightweight rendering configured from the web.config\u003c/li\u003e\n    \u003cli\u003eRadEditor\u0026#39;s TrackChanges does not track typing of !, #, $, %, \u0026amp; characters\u003c/li\u003e\n    \u003cli\u003eTitle of decorated checkboxes by RadFormDecorator is lost in FireFox and IE\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\nYou can quickly go through the complete list of fixes in the \u003ca href\u003d\"http://www.telerik.com/support/whats-new/aspnet-ajax/release-history/ui-for-asp-net-ajax-r2-2016-sp1-version-2016-2-607\"\u003eRelease Notes\u003c/a\u003e.\u003c/p\u003e\n\u003ch2\u003eStability Trends\u003c/h2\u003e\n\u003cp\u003e\nWe do understand how stability impacts your development and we always strive to significantly reduce bugs, to avoid regressions and breaking changes. That\u0026#39;s why I want to share with you the bug reduction progress from 2015 to now for three of the most popular components in the following chart:\u003c/p\u003e\n\u003cp\u003e\u003cimg width\u003d\"670\" height\u003d\"337\" style\u003d\"vertical-align:middle\" title\u003d\"Stability Improvement Trends for Top Controls\" alt\u003d\"Stability Improvement Trends for Top Controls\" src\u003d\"//d585tldpucybw.cloudfront.net/sfimages/default-source/default-album/stability-improvement-trends-for-top-controls.png?sfvrsn\u003d0\"\u003e\u003c/p\u003e\n\u003ch2\u003eImportant Resources\u003c/h2\u003e\n\u003cp\u003e\nYou can download the latest trial build \u003ca href\u003d\"https://www.telerik.com/download-trial-file/v2/ui-for-asp.net-ajax\"\u003ehere\u003c/a\u003e, as well as play with the \u003ca href\u003d\"http://demos.telerik.com/aspnet-ajax/\"\u003eLive Demos\u003c/a\u003e and read the \u003ca href\u003d\"http://docs.telerik.com/devtools/aspnet-ajax/introduction\"\u003eDocumentation\u003c/a\u003e.\u003c/p\u003e\n\u003ch2\u003e\nUpgrading Instructions\u003c/h2\u003e\n\u003cp\u003e\nThe blog post, \u003ca href\u003d\"http://www.telerik.com/blogs/upgrade-the-version-of-your-telerik-asp.net-controls-in-6-easy-steps\"\u003eUpgrade Your Telerik ASP.NET Controls in 6 Easy Steps\u003c/a\u003e,\nwill guide you through the update process and help you troubleshoot any problems that pop up.\u003c/p\u003e\n\u003ch2\u003eRoadmap Plans\u003c/h2\u003e\n\u003cp\u003e\nI also want to inform you that the Product Roadmap for R3'16 is ready. We're about to update the \u003ca href\u003d\"http://www.telerik.com/support/whats-new/aspnet-ajax/roadmap\"\u003eRoadmap page\u003c/a\u003e and will post a blog on the topic pretty soon. Stay tuned!\u003c/p\u003e\n\u003ch2\u003eShare Your Thoughts?\u003c/h2\u003e\nIf you have any questions, feedback or just want to discuss a feature request, do not hesitate to write in the comments section below, in \u003ca href\u003d\"http://feedback.telerik.com/Project/108\"\u003ethe feedback portal\u003c/a\u003e or directly to me at rumen.jekov@telerik.com.", categories: ["UI for ASP.NET AJAX Team"] },
             ];
-            if (!this._blogs) {
-                http.request({
-                    url: "https://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q=http://feeds.telerik.com/blogs",
-                    method: "GET",
-                    headers: { "Accept": "application/json" },
-                    timeout: 2000
-                })
-                    .then(function (response) {
-                    if (status_codes_1.StatusCodes.isOK(response.statusCode)) {
-                        var jsonResponse = response.content.toJSON();
-                        _this.blogs = jsonResponse.responseData.feed.entries;
-                        return jsonResponse;
-                    }
-                    else {
-                        var errorMessage = response.content.toString();
-                        throw new Error(errorMessage);
-                    }
-                }, function (error) {
-                    throw new Error(error);
-                });
-            }
-            else {
-                return this._blogs;
-            }
+            // if (!this._blogs) {
+            //     http.request({
+            //         url: "https://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q=http://feeds.telerik.com/blogs",
+            //         method: "GET",
+            //         headers: { "Accept": "application/json" },
+            //         timeout: 2000 /* miliseconds */
+            //     })
+            //     .then((response: http.HttpResponse) => {
+            //         if (StatusCodes.isOK(response.statusCode)) {
+            //             let jsonResponse: BlogPostsResponse = response.content.toJSON();
+            //             this.blogs = jsonResponse.responseData.feed.entries;
+            //             return jsonResponse;
+            //         } else {
+            //             let errorMessage = response.content.toString();
+            //         	throw new Error(errorMessage);
+            //         }
+            //     }, (error: any) => {
+            //         throw new Error(error);
+            // });
+            // } else {
+            //     return this._blogs;
+            // }
         },
         set: function (value) {
             this._blogs = value;
@@ -50,5 +46,6 @@ var BlogViewModel = (function () {
         configurable: true
     });
     return BlogViewModel;
-})();
+}());
 exports.BlogViewModel = BlogViewModel;
+//# sourceMappingURL=news-view-model.js.map

@@ -1,3 +1,4 @@
+"use strict";
 var LocalNotifications = require("nativescript-local-notifications");
 var NotificationsService;
 (function (NotificationsService) {
@@ -47,3 +48,4 @@ var NotificationsService;
     }
     NotificationsService.hasPermissions = hasPermissions;
 })(NotificationsService = exports.NotificationsService || (exports.NotificationsService = {}));
+//# sourceMappingURL=local-notifications.js.map

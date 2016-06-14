@@ -1,3 +1,4 @@
+"use strict";
 var notifications_1 = require("./../../utils/notifications");
 var application = require("application");
 var Everlive = require('./everlive');
@@ -38,3 +39,4 @@ var PushNotificationsService;
     }
     PushNotificationsService.register = register;
 })(PushNotificationsService = exports.PushNotificationsService || (exports.PushNotificationsService = {}));
+//# sourceMappingURL=push-notifications.js.map

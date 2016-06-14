@@ -4,12 +4,12 @@ import frames = require("ui/frame");
 import platform = require("platform");
 import listView = require("ui/list-view");
 
-import { StatusViewModel } from "./views/status/status-view-model";
+import { MainViewModel } from "./main-view-model";
 
 // Event handler for Page "loaded" event attached in main-page.xml
 export function pageLoaded(args: observable.EventData) {
     var page = <pages.Page>args.object;
-    page.bindingContext = new StatusViewModel();
+    page.bindingContext = new MainViewModel();
 }
     
 export var selectedStatusItem: any;

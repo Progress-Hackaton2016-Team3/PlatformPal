@@ -1,8 +1,9 @@
 var frames = require("ui/frame");
-var status_view_model_1 = require("./views/status/status-view-model");
+var main_view_model_1 = require("./main-view-model");
+// Event handler for Page "loaded" event attached in main-page.xml
 function pageLoaded(args) {
     var page = args.object;
-    page.bindingContext = new status_view_model_1.StatusViewModel();
+    page.bindingContext = new main_view_model_1.MainViewModel();
 }
 exports.pageLoaded = pageLoaded;
 function statusItemTap(args) {
@@ -15,3 +16,4 @@ function incidentsItemTap(args) {
     frames.topmost().navigate("./views/status/status-details-page");
 }
 exports.incidentsItemTap = incidentsItemTap;
+//# sourceMappingURL=main-page.js.map

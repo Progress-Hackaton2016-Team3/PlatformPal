@@ -10,13 +10,13 @@ exports.ViewModelItem = ViewModelItem;
 var StatusViewModel = (function () {
     function StatusViewModel() {
         var data = [
-            { name: "Telerik Analytics Services", status: "Operational" },
+            { name: "Telerik Analytics Services", status: "Fail" },
             { name: "Telerik Platform Web Portal", status: "Operational" },
             { name: "Telerik Analytics Monitor Data Services", status: "Operational" },
             { name: "Telerik AppBuilder Services", status: "Operational" },
-            { name: "Telerik AppFeedback Services", status: "Operational" },
-            { name: "Telerik AppManager Services", status: "Operational" },
-            { name: "Telerik AppPrototyper Services", status: "Operational" },
+            { name: "Telerik AppFeedback Services", status: "Fail" },
+            { name: "Telerik AppManager Services", status: "Fail" },
+            { name: "Telerik AppPrototyper Services", status: "Fail" },
             { name: "Telerik Backend API Services", status: "Operational" },
             { name: "Telerik Backend Push Notifications Services", status: "Operational" },
             { name: "Telerik Backend Cloud Code Services", status: "Operational" },

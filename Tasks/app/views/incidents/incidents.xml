@@ -1,4 +1,4 @@
-<TabViewItem ios:title="&#xf1e6; Incidents" class="tab-title-class">
+<TabViewItem title="&#xf188; Incidents" class="fa-6">
   <TabViewItem.view>
    	<StackLayout class="tab-content">
         <ListView items="{{ items }}" itemTap="incidentsItemTap" row="1">

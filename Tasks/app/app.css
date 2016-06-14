@@ -11,10 +11,48 @@
     color: #3c3c3c;
 }
 
-.listItem
-{
-    font-size:15
+.item-icon{
+    font-size: 30;
 }
+
+.item-title {
+    font-size: 18;
+    color: #3c3c3c;
+    margin-top:5px;
+}
+
+.item-status {
+    font-size: 12;
+    color: #3c3c3c;
+    margin-top:5px;
+    margin-left:4px;    
+    margin-bottom:5px
+}
+
+ .list-view-item {
+     border-radius: 5;
+     border-color: gray;
+     border-width: 0.5;
+    margin-top:5px;
+     padding-top: 5;
+     padding-bottom: 5;
+     padding-left: 5;
+     padding-right: 5;
+  /*   font-size: 16;
+  color: #212121;
+  padding-top: 16;
+  padding-bottom: 16;
+  padding-left: 16;
+  padding-right: 16;  */
+}
+
+.red{
+    color:red;
+}
+.green{
+    color:green;
+}
+
 .tab-title-class {    
     font-size: 32;
 }

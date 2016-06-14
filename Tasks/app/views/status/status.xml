@@ -5,7 +5,7 @@
           <ListView.itemTemplate>
             <GridLayout columns="40, auto" class="list-view-item">
                 <Label text="{{ status !== 'Operational' ? '&#xf10c;' : '&#xf05d;' }}" col="0" class="{{ status !== 'Operational' ? 'item-icon red' : 'item-icon green' }}" />
-                <GridLayout rows="auto, *" class="list-view-item" col="1">  
+                <GridLayout rows="auto, *" col="1">  
                     <Label text="{{ name }}" row="0" class="item-title" />
                     <Label text="{{ status }}" row="1" class="{{ status !== 'Operational' ? 'item-status red' : 'item-status green' }}" />
                 </GridLayout> 

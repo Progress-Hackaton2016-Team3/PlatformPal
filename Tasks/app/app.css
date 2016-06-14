@@ -16,17 +16,18 @@
 }
 
 .item-title {
-    font-size: 16;
+    font-size: 13;
     color: #3c3c3c;
     margin-top:8px;
 }
 
 .item-status {
-    font-size: 12;
+    font-size: 10;
     color: #3c3c3c;
     margin-top:5px;
-    margin-left:4px;    
-    margin-bottom:5px
+    margin-left:3px;    
+    margin-bottom:5px;
+    text-transform: uppercase;
 }
 
 .news-view-item{
@@ -46,20 +47,47 @@
 }
 
 .news-inner-author{
-    font-size:10
+    font-size:10;
+}
+
+.notify-list-view{
+    width:300;
+}
+
+.notify-view-item { 
+    border-radius: 3;
+    color: #A4A4A4; 
+    background-color: #F2F2F2;
+    border-color: #A4A4A4;
+    border-width: 0.8;
+    margin-top:5px;
+    margin-bottom: 5px;
+    padding-top: 15;
+    padding-bottom: 15;
+    padding-left: 15;
+    padding-right: 15;
+}
+
+.notify-view-item-icon{   
+    color: #BDBDBD; 
+    font-size:20;
+}
+
+.notify-view-item-message{    
+    font-size:12;
 }
 
  .list-view-item {
      border-radius: 5;
-     border-color: gray;
+     border-color: #A4A4A4;
      border-width: 0.8;
      margin-top:5px;
      margin-bottom: 5px;
-     padding-top: 5;
-     padding-bottom: 5;
-     padding-left: 5;
-     padding-right: 5;
-     width:350;
+     padding-top: 10;
+     padding-bottom: 10;
+     padding-left: 10;
+     padding-right: 10;
+     width:320;
 }
 
 .red{

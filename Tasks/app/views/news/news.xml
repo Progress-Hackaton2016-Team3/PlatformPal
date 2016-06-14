@@ -1,6 +1,6 @@
 <TabViewItem title="&#xf02d; News">
   <TabViewItem.view>
-   <ListView items="{{ blogs }}" separatorColor="#fff">
+   <ListView items="{{ blogs }}" separatorColor="#fff" itemTap="blogItemTap">
           <ListView.itemTemplate>
              <GridLayout rows="150, *" class="news-view-item">
                 <Image src="{{ img }}" row="0" />

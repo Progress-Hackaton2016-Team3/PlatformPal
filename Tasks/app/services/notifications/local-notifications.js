@@ -1,6 +1,7 @@
 var LocalNotifications = require("nativescript-local-notifications");
-module.exports = {
-    raiseNotification: function (title, message) {
+var NotificationsService;
+(function (NotificationsService) {
+    function raiseNotification(message, title) {
         LocalNotifications.schedule([{
                 title: title || 'PlatformPal',
                 body: message || 'No notification body',
@@ -10,13 +11,15 @@ module.exports = {
         }, function (error) {
             console.log("Notification scheduling error: " + error);
         });
-    },
-    getNotifications: function () {
+    }
+    NotificationsService.raiseNotification = raiseNotification;
+    function getNotifications() {
         LocalNotifications.getScheduledIds().then(function (ids) {
             console.log("ID's: " + ids);
         });
-    },
-    cancelNotification: function (id) {
+    }
+    NotificationsService.getNotifications = getNotifications;
+    function cancelNotification(id) {
         LocalNotifications.cancel(id).then(function (foundAndCanceled) {
             if (foundAndCanceled) {
                 console.log("OK, it's gone!");
@@ -25,18 +28,22 @@ module.exports = {
                 console.log("No ID " + id + " was scheduled");
             }
         });
-    },
-    cancelAllNotifications: function () {
+    }
+    NotificationsService.cancelNotification = cancelNotification;
+    function cancelAllNotifications() {
         LocalNotifications.cancelAll();
-    },
-    requestPermissions: function () {
+    }
+    NotificationsService.cancelAllNotifications = cancelAllNotifications;
+    function requestPermissions() {
         LocalNotifications.requestPermission().then(function (granted) {
             console.log("Permission granted? " + granted);
         });
-    },
-    hasPermissions: function () {
+    }
+    NotificationsService.requestPermissions = requestPermissions;
+    function hasPermissions() {
         LocalNotifications.hasPermission().then(function (granted) {
             console.log("Permission granted? " + granted);
         });
     }
-};
+    NotificationsService.hasPermissions = hasPermissions;
+})(NotificationsService = exports.NotificationsService || (exports.NotificationsService = {}));

@@ -1,6 +1,5 @@
 var frames = require("ui/frame");
 var main_view_model_1 = require("./main-view-model");
-// Event handler for Page "loaded" event attached in main-page.xml
 function pageLoaded(args) {
     var page = args.object;
     page.bindingContext = new main_view_model_1.MainViewModel();
@@ -13,7 +12,11 @@ function statusItemTap(args) {
 exports.statusItemTap = statusItemTap;
 function incidentsItemTap(args) {
     exports.selectedIncidentItem = args.view.bindingContext;
-    frames.topmost().navigate("./views/status/status-details-page");
+    frames.topmost().navigate("./views/incidents/incidents-details-page");
 }
 exports.incidentsItemTap = incidentsItemTap;
-//# sourceMappingURL=main-page.js.map
+function blogItemTap(args) {
+    exports.selectedBlogItem = args.view.bindingContext;
+    frames.topmost().navigate("./views/news/news-details-page");
+}
+exports.blogItemTap = blogItemTap;

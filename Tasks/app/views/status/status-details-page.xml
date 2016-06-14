@@ -2,7 +2,7 @@
       loaded="pageLoaded"
       android:actionBarHidden="true">
   <StackLayout class="tab-content">
-    <Label text="{{ title }}" class="title"/>
-  	<Label text="{{ info }}" class="info" textWrap="true"/>
+    <Label text="{{ name }}" class="title"/>
+  	<Label text="{{ status }}" class="info" textWrap="true"/>
   </StackLayout>
 </Page>

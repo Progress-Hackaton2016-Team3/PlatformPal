@@ -1,30 +1,6 @@
 {
-  "name": "PlatformPal",
-  "version": "0.0.1",
-  "description": "A sample application built during the Progress hackaton",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Progress-Hackaton2016-Team3/PlatformPal.git"
-  },
-  "author": "Progress",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/Progress-Hackaton2016-Team3/PlatformPal/issues"
-  },
-  "homepage": "https://github.com/Progress-Hackaton2016-Team3/PlatformPal",
-  "nativescript": {
-    "id": "com.telerik.platformPal",
-    "tns-ios": {
-      "version": "2.0.0"
+    "dependencies": {
+        "tns-core-modules":"2.0.1"
     },
-    "tns-android": {
-      "version": "2.0.0"
-    }
-  },
-  "dependencies": {
-    "app-options": "file:app-options",
-    "tns-core-modules": "2.0.1",
-    "nativescript-webview-interface ": "*",
-    "nativescript-telerik-ui-pro": "file:_plugins/nativescript-ui-debug-dev-pro.tgz"
-  }
+    "devDependencies": {}
 }

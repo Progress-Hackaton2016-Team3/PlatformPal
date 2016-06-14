@@ -1,0 +1,8 @@
+<TabViewItem ios:title="&#xf1ea; News">
+  <TabViewItem.view>
+   <StackLayout class="tab-content">
+            <Label text="News View" class="title"/>
+            <Label text="This is the content of the first tab." textWrap="true"/>
+          </StackLayout>
+  </TabViewItem.view>
+</TabViewItem>

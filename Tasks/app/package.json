@@ -1,25 +1,20 @@
 {
-	"name": "tns-template-hello-world",
-	"main": "app.js",
-	"version": "1.0.0",
-	"author": "Telerik <support@telerik.com>",
-	"description": "Nativescript hello-world project template",
-	"license": "BSD",
-	"keywords": [
-		"telerik",
-		"mobile",
-		"nativescript",
-		"{N}",
-		"tns",
-		"appbuilder",
-		"template"
-	],
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/NativeScript/template-hello-world.git"
-	},
-	"bugs": {
-		"url": "https://github.com/NativeScript/template-hello-world/issues"
-	},
-	"homepage": "https://github.com/NativeScript/template-hello-world"
+    "name": "tns-template-tab-navigation-ts",
+    "main": "app.js",
+    "version": "2.0.0",
+    "author": "Telerik <support@telerik.com>",
+    "description": "Nativescript tab-navigation-ts project template",
+    "license": "BSD",
+    "keywords": [
+        "telerik",
+        "mobile",
+        "nativescript",
+        "{N}",
+        "tns",
+        "appbuilder",
+        "template"
+    ],
+    "repository": {
+        "url": "https://github.com/NativeScript/NativeScript/commit/5a56e1cc94b698784a7f004f1b9634e64324e5c6"
+    }
 }

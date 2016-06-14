@@ -1,0 +1,14 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      xmlns:r="views/news"
+      xmlns:n="views/notifications"
+      xmlns:s="views/status"
+      loaded="pageLoaded"
+      android:actionBarHidden="true">
+  <TabView selectedColor="#007AFF" class="font-awesome">
+    <TabView.items>
+      <s:status />
+      <r:news />
+      <n:notifications />
+    </TabView.items>
+  </TabView>
+</Page>

@@ -1,0 +1,8 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      loaded="pageLoaded"
+      android:actionBarHidden="true">
+  <StackLayout class="tab-content">
+    <Label text="{{ title }}" class="title"/>
+  	<Label text="{{ info }}" class="info" textWrap="true"/>
+  </StackLayout>
+</Page>

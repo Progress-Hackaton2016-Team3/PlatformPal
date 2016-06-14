@@ -2,12 +2,13 @@ import observable = require("data/observable");
 import observableArray = require("data/observable-array");
 
 export class ViewModelItem {
-    constructor(public title: string, public info: string) {
+    constructor(public name: string, public status: string) {
     }
 }
 
 export class StatusViewModel {
     private _items: observableArray.ObservableArray<ViewModelItem>;
+    //private _items: OperationalStatus[];
     
     constructor() {
         let data = [
@@ -26,7 +27,7 @@ export class StatusViewModel {
         ]
         this._items = new observableArray.ObservableArray<ViewModelItem>();
         for (var i = 0; i < data.length; i++) {
-            this._items.push(new ViewModelItem(data[i].name, "This is the item with status - " + data[i].status));
+            this._items.push(new ViewModelItem(data[i].name, data[i].status));
         }
     }
 

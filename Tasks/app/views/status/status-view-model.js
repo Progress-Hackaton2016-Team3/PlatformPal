@@ -1,8 +1,8 @@
 var observableArray = require("data/observable-array");
 var ViewModelItem = (function () {
-    function ViewModelItem(title, info) {
-        this.title = title;
-        this.info = info;
+    function ViewModelItem(name, status) {
+        this.name = name;
+        this.status = status;
     }
     return ViewModelItem;
 })();
@@ -25,7 +25,7 @@ var StatusViewModel = (function () {
         ];
         this._items = new observableArray.ObservableArray();
         for (var i = 0; i < data.length; i++) {
-            this._items.push(new ViewModelItem(data[i].name, "This is the item with status - " + data[i].status));
+            this._items.push(new ViewModelItem(data[i].name, data[i].status));
         }
     }
     Object.defineProperty(StatusViewModel.prototype, "items", {
@@ -40,4 +40,3 @@ var StatusViewModel = (function () {
     return StatusViewModel;
 })();
 exports.StatusViewModel = StatusViewModel;
-//# sourceMappingURL=status-view-model.js.map

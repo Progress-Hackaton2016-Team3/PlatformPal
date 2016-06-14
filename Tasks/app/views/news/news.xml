@@ -1,4 +1,4 @@
-<TabViewItem ios:title="&#xf1ea; News">
+<TabViewItem title="&#xf02d; News" class="fa-6">
   <TabViewItem.view>
    <StackLayout class="tab-content">
         <ListView items="{{ blogs }}" row="1">

@@ -16,4 +16,9 @@ function incidentsItemTap(args) {
     frames.topmost().navigate("./views/status/status-details-page");
 }
 exports.incidentsItemTap = incidentsItemTap;
+function blogItemTap(args) {
+    exports.selectedBlogItem = args.view.bindingContext;
+    frames.topmost().navigate("./views/news/news-details-page");
+}
+exports.blogItemTap = blogItemTap;
 //# sourceMappingURL=main-page.js.map

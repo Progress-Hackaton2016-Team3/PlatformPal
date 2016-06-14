@@ -11,19 +11,22 @@ export function pageLoaded(args: observable.EventData) {
     var page = <pages.Page>args.object;
     page.bindingContext = new MainViewModel();
 }
-    
-export var selectedStatusItem: any;
 
+export let selectedStatusItem: any;
 export function statusItemTap(args: listView.ItemEventData) {
     selectedStatusItem = args.view.bindingContext; 
     frames.topmost().navigate("./views/status/status-details-page");
 }
     
-export var selectedIncidentItem: any;
+export let selectedIncidentItem: any;
 export function incidentsItemTap(args: listView.ItemEventData) {    
     selectedIncidentItem = args.view.bindingContext; 
     frames.topmost().navigate("./views/status/status-details-page");
 }
 
-
-
+    
+export let selectedBlogItem: any;
+export function blogItemTap(args: listView.ItemEventData) {    
+    selectedBlogItem = args.view.bindingContext; 
+    frames.topmost().navigate("./views/news/news-details-page");
+}

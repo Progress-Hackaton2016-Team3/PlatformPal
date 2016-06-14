@@ -3,16 +3,30 @@
       xmlns:navigation="navigation/example-page"
       xmlns:chart="nativescript-telerik-ui-pro/chart"
       android:actionBarHidden="true">
-<chart:RadCartesianChart id="cartesianChart">
-        <chart:RadCartesianChart.series>
-            <chart:LineSeries items="{{ selectedStatusItem }}" categoryProperty="timestamp" valueProperty="value">
-                <chart:LineSeries.horizontalAxis>
-                    <chart:CategoricalAxis/>
-                </chart:LineSeries.horizontalAxis>
-                <chart:LineSeries.verticalAxis>
-                    <chart:LinearAxis/>
-                </chart:LineSeries.verticalAxis>
-            </chart:LineSeries>
-        </chart:RadCartesianChart.series>
-</chart:RadCartesianChart>
+    <GridLayout rows="*, *">
+        <chart:RadCartesianChart row="0" class="chart" id="cartesianChart">
+                <chart:RadCartesianChart.series>
+                    <chart:LineSeries items="{{ day }}" categoryProperty="timestamp" valueProperty="value">
+                        <chart:LineSeries.horizontalAxis>
+                            <chart:DateTimeCategoricalAxis  dateFormat="yyyy-MM-dd" verticalLocation="Bottom" />
+                        </chart:LineSeries.horizontalAxis>
+                        <chart:LineSeries.verticalAxis>
+                            <chart:LinearAxis  />
+                        </chart:LineSeries.verticalAxis>
+                    </chart:LineSeries>
+                </chart:RadCartesianChart.series>
+        </chart:RadCartesianChart>
+        <chart:RadCartesianChart row="1" class="chart" id="weeklyChart">
+                <chart:RadCartesianChart.series>
+                    <chart:LineSeries items="{{ week }}" categoryProperty="timestamp" valueProperty="value">
+                        <chart:LineSeries.horizontalAxis>
+                            <chart:DateTimeCategoricalAxis  dateFormat="yyyy-MM-dd" verticalLocation="Bottom" />
+                        </chart:LineSeries.horizontalAxis>
+                        <chart:LineSeries.verticalAxis>
+                            <chart:LinearAxis  />
+                        </chart:LineSeries.verticalAxis>
+                    </chart:LineSeries>
+                </chart:RadCartesianChart.series>
+        </chart:RadCartesianChart>
+    </GridLayout>
 </Page>

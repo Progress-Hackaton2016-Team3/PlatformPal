@@ -37,3 +37,9 @@ export function blogItemTap(args: listView.ItemEventData) {
     selectedBlogItem = args.view.bindingContext; 
     frames.topmost().navigate("./views/news/news-details-page");
 }
+
+export let selectedNotificationItem: any;
+export function notificationItemTap(args: any) {    
+    selectedNotificationItem = args.view.bindingContext;
+    frames.topmost().navigate("./views/notifications/notifications-details-page");
+}

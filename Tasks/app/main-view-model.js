@@ -1,9 +1,11 @@
 var news_view_model_1 = require("./views/news/news-view-model");
 var status_view_model_1 = require("./views/status/status-view-model");
+var notifications_view_model_1 = require("./views/notifications/notifications-view-model");
 var MainViewModel = (function () {
     function MainViewModel() {
         this._blogsViewModel = new news_view_model_1.BlogViewModel();
         this._statusViewModel = new status_view_model_1.StatusViewModel();
+        this._platformNotificationsViewModel = new notifications_view_model_1.PlatformNotificationsViewModel();
     }
     Object.defineProperty(MainViewModel.prototype, "blogs", {
         get: function () {
@@ -19,7 +21,13 @@ var MainViewModel = (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(MainViewModel.prototype, "notifications", {
+        get: function () {
+            return this._platformNotificationsViewModel.items;
+        },
+        enumerable: true,
+        configurable: true
+    });
     return MainViewModel;
 })();
 exports.MainViewModel = MainViewModel;
-//# sourceMappingURL=main-view-model.js.map

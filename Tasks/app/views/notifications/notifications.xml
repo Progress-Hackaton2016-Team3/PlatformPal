@@ -1,8 +1,15 @@
-<TabViewItem title="&#xf0f3; Notify" class="fa-6">
+<TabViewItem title="&#xf0f3; Notifications" class="fa-6">
   <TabViewItem.view>
-   <StackLayout class="tab-content">
-            <Label text="Notifications View" class="title"/>
-            <Label text="This is the content of the first tab." textWrap="true"/>
-          </StackLayout>
+   	<StackLayout class="tab-content">
+        <ListView items="{{ notifications }}" itemTap="notificationItemTap">
+          <ListView.itemTemplate>
+            <GridLayout columns="40, auto" class="list-view-item">
+                <GridLayout rows="auto, *" col="1">  
+                    <Label text="{{ message }}" row="0" class="item-title" />
+                </GridLayout>
+            </GridLayout> 
+          </ListView.itemTemplate>
+        </ListView>
+  	</StackLayout>
   </TabViewItem.view>
 </TabViewItem>

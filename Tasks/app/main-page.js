@@ -25,3 +25,8 @@ function blogItemTap(args) {
     frames.topmost().navigate("./views/news/news-details-page");
 }
 exports.blogItemTap = blogItemTap;
+function notificationItemTap(args) {
+    exports.selectedNotificationItem = args.view.bindingContext;
+    frames.topmost().navigate("./views/notifications/notifications-details-page");
+}
+exports.notificationItemTap = notificationItemTap;

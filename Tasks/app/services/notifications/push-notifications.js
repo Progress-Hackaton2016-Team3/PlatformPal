@@ -1,4 +1,5 @@
 var notifications_1 = require("./../../utils/notifications");
+var application = require("application");
 var Everlive = require('./everlive');
 var everlive = new Everlive({
     appId: 'r70pgro2ncmch5w4',
@@ -27,11 +28,13 @@ var PushNotificationsService;
                     callback(notification.message, notification.title);
             }
         };
-        everlive.push.register(pushSettings, function () {
-            console.log("Push notifications: device registration success!");
-        }, function (error) {
-            notifications_1.Notifications.showInfo(JSON.stringify(error));
-        });
+        if (application.android) {
+            everlive.push.register(pushSettings, function () {
+                console.log("Push notifications: device registration success!");
+            }, function (error) {
+                notifications_1.Notifications.showInfo(JSON.stringify(error));
+            });
+        }
     }
     PushNotificationsService.register = register;
 })(PushNotificationsService = exports.PushNotificationsService || (exports.PushNotificationsService = {}));

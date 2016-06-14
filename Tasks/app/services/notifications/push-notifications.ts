@@ -1,4 +1,5 @@
 import {Notifications} from "./../../utils/notifications";
+import application = require("application");
 
 let Everlive = require('./everlive');
 let everlive = new Everlive({
@@ -27,13 +28,15 @@ export module PushNotificationsService {
                 if (callback) callback(notification.message, notification.title);
             }
         };
-
-        everlive.push.register(pushSettings,
-            function () {
-                console.log("Push notifications: device registration success!")
-            },
-            function (error) {
-                Notifications.showInfo(JSON.stringify(error));
-            });
+		
+        if(application.android) {
+            everlive.push.register(pushSettings,
+                function () {
+                    console.log("Push notifications: device registration success!")
+                },
+                function (error) {
+                    Notifications.showInfo(JSON.stringify(error));
+                });
+        }
     }
 }

@@ -1,3 +1,34 @@
-*/bin
-*/obj
-*.user-settings.xml
+# Windows files
+**/Thumbs.db
+
+# Mac OS files
+**/.DS_Store
+**/__MACOSX/**/*
+
+# Visual Studio files
+bin/**/*
+obj/**/*
+**/.vs/**/*
+**/.vscode/**/*
+**/*.obj
+**/*.pdb
+**/*.user
+**/*.aps
+**/*.pch
+**/*.vspscc
+**/*_i.c
+**/*_p.c
+**/*.ncb
+**/*.suo
+**/*.tlb
+**/*.tlh
+**/*.ilk
+**/*.lib
+**/*.sbr
+**/*.user-settings.xml
+**/*.map
+
+# NativeScript files
+lib/**/*
+platforms/**/*
+node_modules/**/*

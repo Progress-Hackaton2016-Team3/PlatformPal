@@ -1,9 +1,9 @@
 {
-    "name": "tns-template-tab-navigation-ts",
+    "name": "tns-platform-pal",
     "main": "app.js",
     "version": "2.0.0",
     "author": "Telerik <support@telerik.com>",
-    "description": "Nativescript tab-navigation-ts project template",
+    "description": "Provides helpful information from the Telerik Platform",
     "license": "BSD",
     "keywords": [
         "telerik",

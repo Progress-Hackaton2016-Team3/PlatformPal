@@ -1,0 +1,22 @@
+{
+	"description": "Provides helpful information from the Telerik Platform",
+	"license": "MIT License",
+	"readme": "README.md",
+	"repository": "https://github.com/Progress-Hackaton2016-Team3/PlatformPal",
+	"nativescript": {
+		"id": "com.telerik.PlatformPal",
+		"tns-ios": {
+			"version": "2.0.1"
+		},
+		"tns-android": {
+			"version": "2.0.0"
+		}
+	},
+	"dependencies": {
+		"tns-core-modules": "2.0.1",
+		"nativescript-push-notifications": "0.0.15",
+		"nativescript-local-notifications": "1.0.2",
+		"nativescript-telerik-ui-pro": "file:_plugins/nativescript-ui-debug-dev-pro.tgz"
+	},
+	"devDependencies": {}
+}

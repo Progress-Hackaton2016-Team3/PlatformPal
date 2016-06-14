@@ -5,7 +5,7 @@
           <ListView.itemTemplate>
             <GridLayout columns="20, *">
             	<Label text="&#xf1e6;" class="listItem" col="0"/>
-            	<Label text="{{ title }}" class="listItem" col="1"/>
+            	<Label text="{{ name }}" class="listItem" col="1"/>
             </GridLayout>
           </ListView.itemTemplate>
         </ListView>

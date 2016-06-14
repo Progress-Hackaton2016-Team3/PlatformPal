@@ -1,8 +1,14 @@
 <TabViewItem ios:title="&#xf1ea; News">
   <TabViewItem.view>
    <StackLayout class="tab-content">
-            <Label text="News View" class="title"/>
-            <Label text="This is the content of the first tab." textWrap="true"/>
-          </StackLayout>
+        <ListView items="{{ blogs }}" row="1">
+          <ListView.itemTemplate>
+            <GridLayout columns="20, *">
+            	<Label text="&#xf1e6;" class="listItem" col="0"/>
+            	<Label text="{{ title }}" class="listItem" col="1"/>
+            </GridLayout>
+          </ListView.itemTemplate>
+        </ListView>
+  	</StackLayout>
   </TabViewItem.view>
 </TabViewItem>

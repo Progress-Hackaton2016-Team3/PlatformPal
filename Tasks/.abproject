@@ -2,10 +2,10 @@
   "ProjectName": "Tasks",
   "ProjectGuid": "27ecf442-3ff5-4c11-ab42-a102e5c5f9a7",
   "projectVersion": 1,
-  "AppIdentifier": "com.telerik.TabVIew",
-  "DisplayName": "TabVIew",
+  "AppIdentifier": "com.telerik.PlatformPal",
+  "DisplayName": "PlatformPal",
   "Author": "",
-  "Description": "TabVIew",
+  "Description": "This app provide access to some nice platform in",
   "BundleVersion": "1.0",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [

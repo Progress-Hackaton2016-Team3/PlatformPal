@@ -1,12 +1,4 @@
 "use strict";
-var application = require("application");
-var local_notifications_1 = require("./services/notifications/local-notifications");
-var push_notifications_1 = require("./services/notifications/push-notifications");
-if (application.android) {
-    push_notifications_1.PushNotificationsService.register(function (message, title) {
-        local_notifications_1.NotificationsService.raiseNotification(message, title);
-    });
-}
 var frames = require("ui/frame");
 var main_view_model_1 = require("./main-view-model");
 // Event handler for Page "loaded" event attached in main-page.xml

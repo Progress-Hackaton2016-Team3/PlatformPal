@@ -6,14 +6,14 @@ export module NotificationsService {
             title: 'PlatformPal',
             body: message || 'No notification body',
             ticker: message
-  		}]).then(
+        }]).then(
             function () {
                 console.log("Notification scheduled");
             },
             function (error) {
                 console.log("Notification scheduling error: " + error);
             }
-        );
+            );
     }
     export function getNotifications() {
         LocalNotifications.getScheduledIds().then(

@@ -1,12 +1,3 @@
-import application = require("application");
-import {NotificationsService} from "./services/notifications/local-notifications";
-import {PushNotificationsService} from "./services/notifications/push-notifications";
-if (application.android) {
-    PushNotificationsService.register(function (message, title) {
-        NotificationsService.raiseNotification(message, title);
-    });
-}
-
 import observable = require("data/observable");
 import pages = require("ui/page");
 import frames = require("ui/frame");

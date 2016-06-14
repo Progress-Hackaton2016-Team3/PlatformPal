@@ -6,8 +6,8 @@
 **/__MACOSX/**/*
 
 # Visual Studio files
-bin/**/*
-obj/**/*
+**/bin/**/*
+**/obj/**/*
 **/.vs/**/*
 **/.vscode/**/*
 **/*.obj
@@ -29,6 +29,6 @@ obj/**/*
 **/*.map
 
 # NativeScript files
-lib/**/*
-platforms/**/*
-node_modules/**/*
+**/lib/**/*
+**/platforms/**/*
+**/node_modules/**/*

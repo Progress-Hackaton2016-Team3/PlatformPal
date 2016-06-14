@@ -2,17 +2,19 @@ import observable = require("data/observable");
 import pages = require("ui/page");
 import frames = require("ui/frame");
 import platform = require("platform");
+import application = require("application");
 import listView = require("ui/list-view");
 
 import { MainViewModel } from "./main-view-model";
 
-import {NotificationsService} from "./services/notifications/local-notifications";
-import {PushNotificationsService} from "./services/notifications/push-notifications";
+if(application.ios){
+    import {NotificationsService} from "./services/notifications/local-notifications";
+    import {PushNotificationsService} from "./services/notifications/push-notifications";
 
-PushNotificationsService.register(function (message, title) {
-    NotificationsService.raiseNotification(message, title);
-});
-
+    PushNotificationsService.register(function (message, title) {
+        NotificationsService.raiseNotification(message, title);
+    });
+}
 // Event handler for Page "loaded" event attached in main-page.xml
 export function pageLoaded(args: observable.EventData) {
     var page = <pages.Page>args.object;

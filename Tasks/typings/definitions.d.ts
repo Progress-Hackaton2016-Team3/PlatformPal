@@ -22,3 +22,9 @@ interface Blog {
     publishedDate: string;
     title: string;
 }
+
+interface OperationalStatus {
+		name: string;
+		status: string;
+		id: string;
+}

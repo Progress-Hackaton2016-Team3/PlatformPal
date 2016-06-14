@@ -35,8 +35,6 @@ var StatusViewModel = (function () {
         enumerable: true,
         configurable: true
     });
-    StatusViewModel.prototype.refresh = function () {
-    };
     return StatusViewModel;
 })();
 exports.StatusViewModel = StatusViewModel;

@@ -3,7 +3,7 @@ import LocalNotifications = require("nativescript-local-notifications");
 export module NotificationsService {
     export function raiseNotification(message: string, title?: string) {
         LocalNotifications.schedule([{
-            title: title || 'PlatformPal',
+            title: 'PlatformPal',
             body: message || 'No notification body',
             ticker: message
   		}]).then(

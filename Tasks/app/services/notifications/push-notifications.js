@@ -13,26 +13,6 @@ var PushNotificationsService;
                 sound: true,
                 alert: true
             },
-            interactiveSettings: {
-                actions: [{
-                        identifier: 'READ_IDENTIFIER',
-                        title: 'Read',
-                        activationMode: "foreground",
-                        destructive: false,
-                        authenticationRequired: true
-                    }, {
-                        identifier: 'CANCEL_IDENTIFIER',
-                        title: 'Cancel',
-                        activationMode: "foreground",
-                        destructive: true,
-                        authenticationRequired: true
-                    }],
-                categories: [{
-                        identifier: 'READ_CATEGORY',
-                        actionsForDefaultContext: ['READ_IDENTIFIER', 'CANCEL_IDENTIFIER'],
-                        actionsForMinimalContext: ['READ_IDENTIFIER', 'CANCEL_IDENTIFIER']
-                    }]
-            },
             notificationCallbackIOS: function (message) {
                 if (callback)
                     callback(message);

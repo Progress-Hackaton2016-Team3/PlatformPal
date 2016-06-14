@@ -1,7 +1,7 @@
 <TabViewItem title="&#xf188; Incidents" class="fa-6">
   <TabViewItem.view>
    	<StackLayout class="tab-content">
-        <ListView items="{{ items }}" itemTap="incidentsItemTap" row="1">
+        <ListView items="{{ incidentItems }}" itemTap="incidentsItemTap" row="1">
           <ListView.itemTemplate>
             <GridLayout columns="20, *">
             	<Label text="&#xf1e6;" class="listItem" col="0"/>

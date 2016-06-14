@@ -1,16 +1,15 @@
 <TabViewItem ios:title="&#xf1e6; Status" class="tab-title-class">
   <TabViewItem.view>
    	<StackLayout class="tab-content">
-        <ListView items="{{ items }}" itemTap="statusItemTap" row="1">
+        <ListView items="{{ items }}" itemTap="statusItemTap">
           <ListView.itemTemplate>
-<!--             <GridLayout columns="20, *">
-            	<Label text="&#xf1e6;" class="listItem" col="0"/>
-            	<Label text="{{ title }}" class="listItem" col="1"/>
-            </GridLayout> -->
-            <GridLayout columns="*, auto">
-                <Label text="{{ name }}" col="0"/>
-                <Label text="{{ status }}" col="1" />    
-			</GridLayout> 
+            <GridLayout columns="40, auto" class="list-view-item">
+                <Label text="{{ status !== 'Operational' ? '&#xf10c;' : '&#xf05d;' }}" col="0" class="{{ status !== 'Operational' ? 'item-icon red' : 'item-icon green' }}" />
+                <GridLayout rows="auto, *" class="list-view-item" col="1">  
+                    <Label text="{{ name }}" row="0" class="item-title" />
+                    <Label text="{{ status }}" row="1" class="{{ status !== 'Operational' ? 'item-status red' : 'item-status green' }}" />
+                </GridLayout> 
+            </GridLayout> 
           </ListView.itemTemplate>
         </ListView>
   	</StackLayout>

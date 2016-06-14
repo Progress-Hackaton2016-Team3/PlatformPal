@@ -8,7 +8,7 @@
                 <chart:RadCartesianChart.series>
                     <chart:LineSeries items="{{ day }}" categoryProperty="timestamp" valueProperty="value">
                         <chart:LineSeries.horizontalAxis>
-                            <chart:DateTimeCategoricalAxis  dateFormat="yyyy-MM-dd" verticalLocation="Bottom" />
+                            <chart:DateTimeCategoricalAxis  dateFormat="yyyy-MM-dd" verticalLocation="Top" />
                         </chart:LineSeries.horizontalAxis>
                         <chart:LineSeries.verticalAxis>
                             <chart:LinearAxis  />

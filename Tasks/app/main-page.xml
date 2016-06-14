@@ -1,7 +1,8 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" 
       xmlns:r="views/news"
       xmlns:n="views/notifications"
-      xmlns:s="views/status"
+      xmlns:s="views/status"      
+      xmlns:i="views/incidents"
       loaded="pageLoaded"
       android:actionBarHidden="true">
   <TabView selectedColor="#007AFF" class="font-awesome">
@@ -9,6 +10,7 @@
       <s:status />
       <r:news />
       <n:notifications />
+      <i:incidents />
     </TabView.items>
   </TabView>
 </Page>

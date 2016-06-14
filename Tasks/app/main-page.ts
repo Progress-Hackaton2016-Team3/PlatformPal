@@ -12,14 +12,18 @@ export function pageLoaded(args: observable.EventData) {
     page.bindingContext = new StatusViewModel();
 }
     
-export var selectedItem: any;
+export var selectedStatusItem: any;
 
 export function statusItemTap(args: listView.ItemEventData) {
-    // Navigate to the details page with context set to the current data item
-     frames.topmost().navigate("./views/status/status-details-page");
-
-    selectedItem = args.view.bindingContext; 
-    //vmModule.statusViewModel.set("selectedItem", args.view.bindingContext);
+    selectedStatusItem = args.view.bindingContext; 
+    frames.topmost().navigate("./views/status/status-details-page");
 }
+    
+export var selectedIncidentItem: any;
+export function incidentsItemTap(args: listView.ItemEventData) {    
+    selectedIncidentItem = args.view.bindingContext; 
+    frames.topmost().navigate("./views/status/status-details-page");
+}
+
 
 

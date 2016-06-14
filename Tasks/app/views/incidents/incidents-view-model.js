@@ -1,23 +1,9 @@
-import observable = require("data/observable");
-import observableArray = require("data/observable-array");
-import {
-    Notifications
-} from "../../utils/notifications";
-import * as http from "http";
-import {
-    ViewModelItem
-} from "../status/status-view-model";
-
-// export class ViewModelItem {
-//     constructor(public title: string, public info: string) {}
-// }
-
-export class IncidentsViewModel {
-    private _items: observableArray.ObservableArray < ViewModelItem > ;
-
-    constructor() {
-        this._items = new observableArray.ObservableArray < ViewModelItem > ();
-        let data = [{
+var observableArray = require("data/observable-array");
+var status_view_model_1 = require("../status/status-view-model");
+var IncidentsViewModel = (function () {
+    function IncidentsViewModel() {
+        this._items = new observableArray.ObservableArray();
+        var data = [{
                 "name": "Major outage in Telerik Platform",
                 "status": "resolved",
                 "created_at": "2016-06-09T11:58:36.442Z",
@@ -54,11 +40,11 @@ export class IncidentsViewModel {
                         "affected_components": [
                             {
                                 "name": "No components were affected by this update."
-                    }
-                ],
+                            }
+                        ],
                         "id": "7m2lhvd3nzy4",
                         "incident_id": "gzrdn0ymmjp1"
-            },
+                    },
                     {
                         "status": "monitoring",
                         "body": "A fix has been implemented and we are monitoring the results.",
@@ -70,11 +56,11 @@ export class IncidentsViewModel {
                         "affected_components": [
                             {
                                 "name": "No components were affected by this update."
-                    }
-                ],
+                            }
+                        ],
                         "id": "v4pdghdlzmsk",
                         "incident_id": "gzrdn0ymmjp1"
-            },
+                    },
                     {
                         "status": "investigating",
                         "body": "Our web servers are down. No data has been lost and the system should be caught up shortly.",
@@ -86,13 +72,13 @@ export class IncidentsViewModel {
                         "affected_components": [
                             {
                                 "name": "No components were affected by this update."
-                    }
-                ],
+                            }
+                        ],
                         "id": "my8t8shrxg6w",
                         "incident_id": "gzrdn0ymmjp1"
-            }
-        ]
-    },
+                    }
+                ]
+            },
             {
                 "name": "AppBuilder iOS build and AppManager iOS app resigning are temporarily unavailable",
                 "status": "resolved",
@@ -130,7 +116,7 @@ export class IncidentsViewModel {
                         "affected_components": null,
                         "id": "frfz1l0r2798",
                         "incident_id": "dyydh2t8r73y"
-            },
+                    },
                     {
                         "status": "monitoring",
                         "body": "We have resolved the issue and are currently monitoring our systems.",
@@ -142,7 +128,7 @@ export class IncidentsViewModel {
                         "affected_components": null,
                         "id": "tlbtgmfx79p0",
                         "incident_id": "dyydh2t8r73y"
-            },
+                    },
                     {
                         "status": "identified",
                         "body": "We have detected connectivity issues between our Mac machines and the rest of our solution.\r\nWe are working on resolving the issue as soon as possible.\r\n\r\nThank you for your understanding.",
@@ -154,9 +140,9 @@ export class IncidentsViewModel {
                         "affected_components": null,
                         "id": "kgtvv3tgpbsr",
                         "incident_id": "dyydh2t8r73y"
-            }
-        ]
-    },
+                    }
+                ]
+            },
             {
                 "name": "Telerik AppBuilder: Degraded Performance",
                 "status": "resolved",
@@ -194,7 +180,7 @@ export class IncidentsViewModel {
                         "affected_components": null,
                         "id": "q6fgvbr385nh",
                         "incident_id": "2c24gjf77hyd"
-            },
+                    },
                     {
                         "status": "identified",
                         "body": "We have identified a performance issue on one of our storage servers. \r\nSome of our users might experience slowdowns and timeouts while using Telerik AppBuilder cloud services.",
@@ -206,9 +192,9 @@ export class IncidentsViewModel {
                         "affected_components": null,
                         "id": "1hshthdb379b",
                         "incident_id": "2c24gjf77hyd"
-            }
-        ]
-    },
+                    }
+                ]
+            },
             {
                 "name": "Telerik Platform iOS Services are currently unavailable",
                 "status": "resolved",
@@ -246,7 +232,7 @@ export class IncidentsViewModel {
                         "affected_components": null,
                         "id": "85wj286dq4jq",
                         "incident_id": "029cvdcxb1yr"
-            },
+                    },
                     {
                         "status": "monitoring",
                         "body": "The issue was resolved. We are currently monitoring our systems.\r\nThe root of the issue was related to a core switch backplane failure, which caused OSPF routing to react unfavorably, ultimately causing most of our mac machines' routing towards the internet to fail intermittently.",
@@ -258,7 +244,7 @@ export class IncidentsViewModel {
                         "affected_components": null,
                         "id": "wmbrrkvdgtt3",
                         "incident_id": "029cvdcxb1yr"
-            },
+                    },
                     {
                         "status": "identified",
                         "body": "We have confirmed that the outage is caused by network related issues in our mac hosting provider.",
@@ -270,7 +256,7 @@ export class IncidentsViewModel {
                         "affected_components": null,
                         "id": "g3qmr1w41yr4",
                         "incident_id": "029cvdcxb1yr"
-            },
+                    },
                     {
                         "status": "investigating",
                         "body": "AppBuilder iOS cloud build and AppManager iOS codesigning features are currently unavailable.",
@@ -282,9 +268,9 @@ export class IncidentsViewModel {
                         "affected_components": null,
                         "id": "wjcgjwmd841m",
                         "incident_id": "029cvdcxb1yr"
-            }
-        ]
-    },
+                    }
+                ]
+            },
             {
                 "name": "Cloud Code Partial Outage",
                 "status": "resolved",
@@ -322,7 +308,7 @@ export class IncidentsViewModel {
                         "affected_components": null,
                         "id": "ljsbnl5kldqr",
                         "incident_id": "29ynzc1r422z"
-            },
+                    },
                     {
                         "status": "investigating",
                         "body": "We are experiencing extremely heavy load on our cloud code servers. Investigation is in process.",
@@ -334,9 +320,9 @@ export class IncidentsViewModel {
                         "affected_components": null,
                         "id": "j37hybgsfbtj",
                         "incident_id": "29ynzc1r422z"
-            }
-        ]
-    },
+                    }
+                ]
+            },
             {
                 "name": "Telerik AppBuilder: Degraded Performance",
                 "status": "resolved",
@@ -374,7 +360,7 @@ export class IncidentsViewModel {
                         "affected_components": null,
                         "id": "v933jb7x2gf4",
                         "incident_id": "f4xw1v6p19z4"
-            },
+                    },
                     {
                         "status": "monitoring",
                         "body": "We have resolved the issue and are currently monitoring our systems. \r\nThe performance issue was caused by storage hardware failure.",
@@ -386,7 +372,7 @@ export class IncidentsViewModel {
                         "affected_components": null,
                         "id": "dzqzznpmv9tm",
                         "incident_id": "f4xw1v6p19z4"
-            },
+                    },
                     {
                         "status": "identified",
                         "body": "We have identified a performance issue on one of our storage servers.\r\nSome of our users might experience slowdowns and timeouts while using Telerik AppBuilder cloud services.",
@@ -398,40 +384,22 @@ export class IncidentsViewModel {
                         "affected_components": null,
                         "id": "kcsjchj505vd",
                         "incident_id": "f4xw1v6p19z4"
-            }
-        ]
-    }];
+                    }
+                ]
+            }];
         for (var i = 0; i < data.length; i++) {
             console.log(data[i].name);
-
-            this._items.push(new ViewModelItem(data[i].name, data[i].incident_updates[0].body));
+            this._items.push(new status_view_model_1.ViewModelItem(data[i].name, data[i].incident_updates[0].body));
         }
-
-        // http.request({
-        //         url: "https://api.statuspage.io/v1/pages/2lh8n3fl4jfr/incidents.json",
-        //         method: "GET",
-        //         headers: {
-        //             "Content-Type": "application/json",
-        //             "Authorization": "OAuth 82135836-4bf5-47bb-ae76-6d9037187951"
-        //         },
-        //         timeout: 5000 /* miliseconds */
-        //     })
-        //     .then((response: http.HttpResponse) => {
-        //         if (response.statusCode == 200) {
-        //             let data = response.content.toJSON();
-        //             console.log(response);
-        //         } else {
-        //             Notifications.showError(response.content.toString());
-        //         }
-        //     }, (error: any) => {
-        //         Notifications.showError(error.message);
-        //         //this.endLoading();
-        //     });
     }
-
-    public get items(): observableArray.ObservableArray < ViewModelItem > {
-        return this._items;
-    }
-
-    refresh() {}
-}
+    Object.defineProperty(IncidentsViewModel.prototype, "items", {
+        get: function () {
+            return this._items;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    IncidentsViewModel.prototype.refresh = function () { };
+    return IncidentsViewModel;
+})();
+exports.IncidentsViewModel = IncidentsViewModel;

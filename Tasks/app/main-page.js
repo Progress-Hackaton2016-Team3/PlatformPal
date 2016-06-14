@@ -17,7 +17,7 @@ function statusItemTap(args) {
 exports.statusItemTap = statusItemTap;
 function incidentsItemTap(args) {
     exports.selectedIncidentItem = args.view.bindingContext;
-    frames.topmost().navigate("./views/incidenst/incidents-details-page");
+    frames.topmost().navigate("./views/incidents/incidents-details-page");
 }
 exports.incidentsItemTap = incidentsItemTap;
 function blogItemTap(args) {

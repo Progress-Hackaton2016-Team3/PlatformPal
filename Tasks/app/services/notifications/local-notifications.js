@@ -3,7 +3,7 @@ var NotificationsService;
 (function (NotificationsService) {
     function raiseNotification(message, title) {
         LocalNotifications.schedule([{
-                title: title || 'PlatformPal',
+                title: 'PlatformPal',
                 body: message || 'No notification body',
                 ticker: message
             }]).then(function () {

@@ -1,14 +1,15 @@
-<TabViewItem title="&#xf02d; News" class="fa-6">
+<TabViewItem title="&#xf02d; News">
   <TabViewItem.view>
-   <StackLayout class="tab-content">
-        <ListView items="{{ blogs }}" row="1">
+   <ListView items="{{ blogs }}" separatorColor="#fff">
           <ListView.itemTemplate>
-            <GridLayout columns="20, *">
-            	<Label text="&#xf1e6;" class="listItem" col="0"/>
-            	<Label text="{{ title }}" class="listItem" col="1"/>
-            </GridLayout>
+             <GridLayout rows="150, *" class="news-view-item">
+                <Image src="{{ img }}" row="0" />
+                <GridLayout rows="auto, *" row="1" class="news-inner-grid">  
+                    <Label text="{{ title }}" row="0" class="news-inner-title" textWrap="true" />
+                    <Label text="{{ author }}" row="1" class="news-inner-author"/>
+                </GridLayout> 
+            </GridLayout> 
           </ListView.itemTemplate>
         </ListView>
-  	</StackLayout>
   </TabViewItem.view>
 </TabViewItem>

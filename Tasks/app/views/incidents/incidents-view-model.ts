@@ -404,7 +404,7 @@ export class IncidentsViewModel {
         for (var i = 0; i < data.length; i++) {
             console.log(data[i].name);
 
-            this._items.push(new ViewModelItem(data[i].name, data[i].incident_updates[0].body));
+            this._items.push(new ViewModelItem(data[i].name, data[i].shortlink, (new Date(data[i].created_at)).toDateString()));
         }
 
         // http.request({

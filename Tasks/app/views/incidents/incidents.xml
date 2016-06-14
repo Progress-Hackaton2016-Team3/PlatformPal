@@ -1,14 +1,12 @@
 <TabViewItem title="&#xf188; Incidents" class="fa-6">
   <TabViewItem.view>
-   	<StackLayout class="tab-content">
-        <ListView items="{{ incidentItems }}" itemTap="incidentsItemTap" row="1">
+        <ListView items="{{ incidentItems }}" itemTap="incidentsItemTap" row="1" separatorColor="#fff" class="notify-list-view">
           <ListView.itemTemplate>
-            <GridLayout columns="20, *">
-            	<Label text="&#xf1e6;" class="listItem" col="0"/>
-            	<Label text="{{ name }}" class="listItem" col="1"/>
+            <GridLayout rows="20, auto" class="notify-view-item">
+            	<Label text="{{'&#xf1e6;' + date }}" class="listItem" row= "0"/>
+            	<Label text="{{ name }}" class="listItem" row = "1"/>
             </GridLayout>
           </ListView.itemTemplate>
         </ListView>
-  	</StackLayout>
   </TabViewItem.view>
 </TabViewItem>
